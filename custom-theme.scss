@@ -119,10 +119,10 @@ $presentation-h3-font-size: 1.1em;
   color: #636e72;
 }
 
-// Code blocks — smaller for slides
+// Code blocks
 .reveal pre code {
-  font-size: 0.65em;
-  line-height: 1.4;
+  font-size: 1.0em;
+  line-height: 1.5;
   max-height: 400px;
 }
 

@@ -1,7 +1,7 @@
 ---
-title: "Orientation to R"
+title: "An Orientation to R"
 subtitle: "Getting comfortable with R and RStudio"
-author: "Ashwini Kalantri"
+author: "Dr Ashwini Kalantri"
 date: "2026-03-17"
 date-format: DD MMM YYYY
 institute: Professor of Community Medicine, MGIMS, Sevagram
@@ -11,108 +11,82 @@ format:
     slide-number: true
     footer: "R for HTA (Basics) — RRC-HTA, AIIMS Bhopal"
 ---
-## What This Session Is (and Isn't)
+
+# ⚠️ Warning ⚠️ {auto-animate="true"}
 
 This is **not** an R programming course.
 
-. . .
+# Goal {auto-animate="true"}
 
-You do not need to memorise anything here.
+When you see R code:
 
-. . .
+- You are not `intimidated` by it
+- You `recognise` what it is doing
+- You can `run` it and see output
+- You can `change` an input value
 
-**Goal:** Build enough familiarity that when you see R code:
+# The RStudio Interface
 
-- You can recognise what it is doing
-- You can change an input value
-- You can run it and see output
-- You are not intimidated by it
-
-. . .
-
-Think of this as learning to **read a language** well enough to follow a conversation — not to write poetry.
-
-## The RStudio Interface
+##  {auto-animate="true" visibility="uncounted" data-menu-title="The Rstudio Interface"}
 
 ![](files/rstudio_1.png)
 
-## The RStudio Interface
+## {auto-animate="true" visibility="uncounted" data-menu-title="The Rstudio Interface"}
 
 ![](files/rstudio_2.png)
 
-## A sneak peek into Positron
+# The Workflow
 
-![](files/positron.png)
+```{mermaid}
+%%| label: fig-workflow
+%%| fig-cap: The workshop workflow
+flowchart LR
+  A["<b><font size=6>READ</font></b><br/><font size=6>the code</font><br/><i><font size=5>(understand logic)</font></i>"]:::blue --> B["<b><font size=6>MODIFY</font></b><br/><font size=6>a parameter</font><br/><i><font size=5>(change a number)</font></i>"]:::green --> C["<b><font size=6>RUN</font></b><br/><font size=6>the chunk</font><br/><i><font size=5>(click play)</font></i>"]:::orange --> D["<b><font size=6>INTERPRET</font></b><br/><font size=6>the output</font><br/><i><font size=5>(what changed?)</font></i>"]:::red
+  D -. "<b><font size=6>Try again</font></b>" .-> B
 
-## Your first `code`
+classDef blue   fill:#4e79a7,color:#fff
+classDef green  fill:#59a14f,color:#fff
+classDef orange fill:#f28e2b,color:#fff
+classDef red    fill:#e15759,color:#fff
+```
+
+## Working with .qmd Files
+
+All workshop materials are in **Quarto (.qmd)** files:
+
+- **Text** — explanations
+- **Code chunks** — grey blocks with R code
+- **Outputs** — results, tables, plots
+
+. . .
+
+**To work with a .qmd file:**
+
+1. Open it in RStudio
+2. Read the text explanations
+3. Run code chunks one at a time (click the green play button ▶)
+4. See the output appear below each chunk
+5. Modify values and re-run
+
+# Your first `code` {auto-animate="true"}
 
 ```{r}
 #| echo: true
-#| output-location: column-fragment
+#| output-location: fragment
 print("Coding for better health decisions.")
 ```
 
-## Assignment {auto-animate="true"}
+# Assignment {auto-animate="true"}
 
-`<-`
+Assign a `value` to a `name` with `<-`  [*(or `->`, `=`)*]{style="font-size: 0.75em; color: #888;"}
 
 ```{r}
 #| echo: true
-#| output-location: column-fragment
-text1 <- "Coding for better health decisions."
-print(text1)
+#| output-location: fragment
+text <- "Coding for better health decisions."
+print(text)
 ```
 
-<!-- `->` -->
-
-<!-- ```{r} -->
-<!-- #| echo: true -->
-<!-- #| output-location: column-fragment -->
-<!-- "Hello World!" -> text2 -->
-<!-- print(text2) -->
-<!-- ``` -->
-
-<!-- `=` -->
-
-<!-- ```{r} -->
-<!-- #| echo: true -->
-<!-- #| output-location: column-fragment -->
-<!-- text3 = "Hello World!" -->
-<!-- print(text3) -->
-<!-- ``` -->
-
-## Reserved Words {auto-animate="true"}
-
-::: columns
-::: {.column width="30%"}
--   if
--   else
--   while
--   repeat
--   for
--   function
--   in
-:::
-
-::: {.column width="30%"}
--   next
--   break
--   TRUE
--   FALSE
--   NULL
--   Inf
--   NaN
-:::
-
-::: {.column width="30%"}
--   NA
--   NA_integer
--   NA_real
--   NA_complex\_
--   NA_character\_
--   …
-:::
-:::
 
 # Operators
 
@@ -150,8 +124,6 @@ Division
 86 / 3
 ```
 
-## Arithmetic {auto-animate="true" visibility="uncounted"}
-
 Exponentiation
 
 ```{r}
@@ -160,14 +132,6 @@ Exponentiation
 8^2
 ```
 
-Modulus
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-77%%3
-
-```
 
 ## Relational {auto-animate="true"}
 
@@ -179,7 +143,7 @@ Greater
 5 > 6
 ```
 
-Lesser
+Less than
 
 ```{r}
 #| echo: true
@@ -205,7 +169,7 @@ Greater or equal
 8 >= 5
 ```
 
-Lesser or equal
+Less than or equal
 
 ```{r}
 #| echo: true
@@ -221,147 +185,6 @@ Not Equal
 9 != 10
 ```
 
-## Joining Logical
-
-`AND`
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-TRUE & TRUE
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-TRUE & FALSE
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-FALSE & FALSE
-```
-
-`OR`
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-TRUE | TRUE
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-TRUE | FALSE
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-FALSE | FALSE
-```
-
-## Classes {auto-animate="true"}
-
-Integer
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-int <- 3L
-print(int)
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-class(int)
-```
-
-Numeric
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-num <- 4.3
-print(num)
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-class(num)
-```
-
-Character
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-name <- "Your Name"
-print(name)
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-class(name)
-```
-
-## Classes {auto-animate="true" visibility="uncounted"}
-
-Logical
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-logT <- TRUE
-logF <- F
-print(logF)
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-class(logF)
-```
-
-Date
-
-```{r}
-#| echo: true
-#| output-location: fragment
-date1 <- "2023-12-18"
-date2 <- 2023-12-18
-date3 <- as.Date("2023-12-18")
-date4 <- as.Date("18 Dec 2023","%d %b %Y")
-date5 <- as.Date(45076, origin = "1900-01-01")
-print(date1)
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-class(date1)
-```
-
-## Class Conversion {auto-animate="\"true"}
-
-```{r}
-#| echo: true
-num <- "1"
-num <- as.numeric(num)
-
-numLet <- as.numeric(LETTERS)
-charNum <- as.character(1:100)
-
-tf <- c("TRUE","FALSE","FALSE")
-tf <- as.logical(tf)
-
-num <- as.character(num)
-```
 
 # Objects {auto-animate="true" visibility="uncounted"}
 
@@ -371,13 +194,8 @@ num <- as.character(num)
 #| echo: true
 #| output-location: fragment
 
-vec1 <- c(2,4,6,8,3,5.5)
-vec2 <- 4
+vec <- c(2, 4, 6, 8, 3, 5.5)
 
-#combining vectors
-newVec <- c(vec1,vec2)
-
-newVec
 ```
 
 ```{r}
@@ -392,7 +210,7 @@ dateVec
 ```{r}
 #| echo: true
 #| output-location: fragment
-newVec[5]
+vec[5]
 ```
 
 ## Matrix {auto-animate="true"}
@@ -400,44 +218,30 @@ newVec[5]
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-let <- matrix(LETTERS,
+mat <- matrix(1:20,
               nrow = 6,
               ncol = 6,
               byrow = F)
 
-let
+mat
 ```
-
+. . .
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-let[3,5]
+mat[3,5]
 ```
-
+. . .
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-let[,5]
+mat[,5]
 ```
-
+. . .
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-let[5,]
-```
-
-## Factor {auto-animate="true"}
-
-```{r}
-#| echo: true
-#| output-location: fragment
-gender <- c(1,2,2,1,1,1,2,2,1,2,1)
-
-genFac <- factor(gender,
-                 levels = c(1,2),
-                 labels = c("Male","Female"))
-
-genFac
+mat[5,]
 ```
 
 ## Data Frames {auto-animate="true"}
@@ -468,71 +272,16 @@ df <- data.frame(age,gender,occu,dob)
 df
 ```
 
-```{r}
-#| echo: true
-#| output-location: column-fragment
-df[2,]
-```
+. . .
+
+Accessing variables with `$`
 
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-df[,2]
+df$age
 ```
 
-```{r}
-#| echo: true
-#| output-location: column-fragment
-df[2]
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-df[2,4]
-```
-
-## List {auto-animate="true"}
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-list <- list(df,dob,let,newVec)
-
-list
-```
-
-## List {auto-animate="true" visibility="uncounted"}
-
-List with nth object(s)
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-list[2]
-```
-
-nth object
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-list[[2]]
-```
-
-selecting withing object
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-list[[2]][4]
-```
-
-```{r}
-#| echo: true
-#| output-location: column-fragment
-list[[1]][2,3]
-```
 
 # Functions {auto-animate="true"}
 ```{r}
@@ -541,18 +290,6 @@ list[[1]][2,3]
 function_name(argument1 = value1, argument2 = value2, ...)
 ```
 
-## Functions {auto-animate="true" visibility="uncounted"}
-```{r}
-#| echo: true
-#| output-location: column-fragment
-addition <- function(n1,n2){
-  n1 + n2
-}
-
-div <- function(n1,n2){
-  n1 / n2
-}
-```
 
 ## Functions {auto-animate="true" visibility="uncounted"}
 
@@ -560,10 +297,16 @@ div <- function(n1,n2){
 #| echo: true
 #| output-location: column-fragment
 
-div(n1 = 55,n2 = 3)
+mean(x = df$age, na.rm = TRUE)
 ```
 
 # Packages {auto-animate="true"}
+```{r}
+#| eval: false
+#| include: true
+#| echo: true
+install.packages("dplyr")
+```
 
 ```{r}
 #| echo: true
@@ -573,128 +316,40 @@ library(dplyr)
 dplyr::glimpse(df)
 ```
 
-# Working Directory {auto-animate="true"}
+. . .
 
-``` r
-setwd("~/r4ph24") #Mac, Linux, Unix
+Install once, load every time
 
-setwd("C:/user/ashwini/documents/r4ph24") #Windows
+# Pipes {auto-animate="true"}
 
-getwd()
-```
-
-# Projects {auto-animate="true"}
-
-# Scripts {auto-animate="true"}
-
-- Names
-- Spaces
-- Pipes
-- Comments
-
-## Names {auto-animate="true" visibility="uncounted"}
+`|>` or `%>%`
 
 ```{r}
 #| echo: true
-# Strive for:
-young_age <- df %>%  filter(age < 20)
 
-# Avoid:
-YOUNGAGE <- df %>%  filter(age < 20)
-```
-
-## Spaces {auto-animate="true" visibility="uncounted"}
-```{r}
-#| echo: false
-a = 10
-b = 20
-d = 4
-```
-```{r}
-#| echo: true
-# Strive for
-z <- (a + b)^2 / d
-
-# Avoid
-z<-( a + b ) ^ 2/d
-
-# Strive for
-mean_age <- mean(df$age, na.rm = TRUE)
-
-# Avoid
-mean_age<-mean (df$age ,na.rm=TRUE)
-```
-
-## Pipes {auto-animate="true" visibility="uncounted"}
-
-```{r}
-#| echo: true
-# Avoid
-pipe <- df %>% select(age,dob,occu) %>% mutate(age_cat = if_else(age < 20,"Young","Old"))
-
-# Strive for
-pipe <- df %>%
-  select(age, dob, occu) %>%
-  mutate(age_cat = if_else(age < 20, "Young", "Old"))
-
-# Avoid
-pipe <- df %>%
-  select(age, dob, occu) %>%
-  summarise(age_cat = mean(
-                            age,
-                            na.rm = TRUE)
-                          )
-
-# Strive for
-pipe <- df %>%
-  select(age, dob, occu) %>%
-  summarise(age_cat = mean(
-    age,
-    na.rm = TRUE)
+df |> 
+  select(age, dob, occu) |> 
+  summarise(
+    mean_age = mean(age, na.rm = TRUE)
     )
-```
-
-## Commenting {auto-animate="true"}
-
-```{r}
-#| echo: true
-#| eval: false
-
-# Print the text "Hello World"
-print("Hello World!")
-
-print("Hello World!") # Print the text "Hello World"
-
-# Multi-line comment
-# about printing the text "Hello World"
-print("Hello World!")
-```
-
-##### Sections
-```{r}
-#| echo: true
-#| eval: false
-# Section 1 ####
-print("Section 1")
-
-## Sub Section ####
-print("Sub section")
-
-# Section 2 ####
-print("Section 2")
-
 ```
 
 # Importing Data {auto-animate="true"}
 
-## CSV {auto-animate="true" visibility="uncounted"}
+## Importing Data with GUI {auto-animate="true" visibility="uncounted"}
+
+![](files/import.png)
+
+## Importing Data with Code {auto-animate="true" visibility="uncounted"}
+
+CSV
 
 ```{r}
 #| echo: true
 data <- read.csv("files/data.csv")
 ```
 
-## Excel {auto-animate="true" visibility="uncounted"}
+Excel
 
 ```{r}
 #| echo: true
@@ -702,7 +357,7 @@ library(readxl)
 data <- read_excel("files/data.xlsx")
 ```
 
-## Stata, SPSS {auto-animate="true" visibility="uncounted"}
+Stata, SPSS
 
 ```{r}
 #| echo: true
@@ -722,39 +377,74 @@ data <- rio::import("files/data.sav")
 data <- rio::import("files/data.dta")
 ```
 
-## Loops
+# Loops
+## For loops
+```{r}
+#| echo: false
+library(dplyr)
+data <- rio::import("files/data.csv") |> 
+  mutate(bmi = round(wt/((ht/100)^2),1))
+```
+```{r}
+#| echo: true
+for (i in 1:nrow(data)) {
+  bmi <- round(data$wt[i] / (((data$ht[i] / 100))^2), 2)
+  cat("BMI of Record No", i, "is", bmi, "\n")
+}
+```
 
+# Graphs
 
+## ggplot
 
-<!-- # Tidy Data {auto-animate="true"} -->
+```{r}
+#| echo: true
+#| output-location: fragment
+library(ggplot2)
+ggplot(data, aes(x = ht, y = wt, colour = bmi)) +
+  geom_point(size = 2) +
+  labs(x = "Height", y = "Weight", title = "Height vs Weight") +
+  theme_minimal()
+```
 
-<!-- ## Tidy Data {auto-animate="true" visibility="uncounted"} -->
+## Three Things to Remember
 
-<!-- 1.  Each variable is a column; each column is a variable. -->
+1. **Values are stored with `<-`**
+   - Change them by editing the number
 
-<!-- 2.  Each observation is a row; each row is an observation. -->
+. . .
 
-<!-- 3.  Each value is a cell; each cell is a single value. -->
+2. **Code runs top to bottom**
+   - Run chunks in order
 
-<!-- ![](files/tidy-1.png) -->
+. . .
 
-<!-- # Getting Help {auto-animate="true"} -->
+3. **If something breaks, read the error message**
+   - It often tells you what went wrong
 
-<!-- ## Help yourself {auto-animate="true" visibility="uncounted"} -->
+Everything else you can look up — or ask an AI tool.
 
-<!-- -   Read the manual -->
-<!-- -   Check your code -->
-<!-- -   Read the error message -->
-<!-- -   Web search -->
-<!-- -   Read the forums -->
-<!-- -   Rubber duck debugging -->
+## Try It Yourself
 
-<!-- ## Get Help {auto-animate="true" visibility="uncounted"} -->
+```{r}
+#| label: try-it
+#| echo: true
 
-<!-- -   Ask a friend, colleague -->
-<!-- -   Post on the forums -->
-<!--     -   Describe your goal -->
-<!--     -   Be explicit about your question -->
-<!--     -   Provide specific information -->
-<!--     -   Be courteous -->
-<!--     -   Provide the solution if you found it elsewhere. -->
+# YOUR TASK: Change these values and re-run
+cost_A <- 3000
+cost_B <- 1500
+qaly_A <- 0.82
+qaly_B <- 0.75
+
+# Calculate ICER
+icer <- (cost_A - cost_B) / (qaly_A - qaly_B)
+cat("ICER = ₹", round(icer, 0), "per QALY gained\n")
+
+# Is it cost-effective?
+wtp <- 100000
+if (icer < wtp) {
+  cat("Cost-effective at WTP = ₹", format(wtp, big.mark=",", scientific = F), "\n")
+} else {
+  cat("NOT cost-effective\n")
+}
+```
