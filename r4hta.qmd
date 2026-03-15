@@ -95,7 +95,7 @@ print("Coding for better health decisions.")
 
 # Assignment {auto-animate="true"}
 
-Assign a `value` to a `name` with `<-`  [*(or `->`, `=`)*]{style="font-size: 0.75em; color: #888;"}
+Assign a `value` to a `name` with `<-`
 
 ```{r}
 #| echo: true
@@ -104,6 +104,7 @@ text <- "Coding for better health decisions."
 print(text)
 ```
 
+You may see `->` or `=` used for assignment.
 
 # Operators
 
