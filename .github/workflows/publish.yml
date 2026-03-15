@@ -24,7 +24,7 @@ jobs:
           r-version: '4.4.0'
 
       - name: Install R packages
-        run: Rscript -e 'install.packages(c("knitr", "rmarkdown", "dplyr", "readxl", "haven", "rio"))'
+        run: Rscript -e 'install.packages(c("knitr", "rmarkdown", "dplyr", "readxl", "haven", "rio", "ggplot2"))'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
