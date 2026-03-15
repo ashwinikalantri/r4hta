@@ -76,6 +76,23 @@ All workshop materials are in **Quarto (.qmd)** files:
 print("Coding for better health decisions.")
 ```
 
+## Commenting {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Print the text
+print("Coding for better health decisions.")
+
+print("Coding for better health decisions.") # Print the text
+
+# Multi-line comment
+# about printing the text
+print("Coding for better health decisions.")
+```
+
+
 # Assignment {auto-animate="true"}
 
 Assign a `value` to a `name` with `<-`  [*(or `->`, `=`)*]{style="font-size: 0.75em; color: #888;"}
@@ -196,15 +213,15 @@ Not Equal
 
 vec <- c(2, 4, 6, 8, 3, 5.5)
 
+vec
 ```
 
 ```{r}
 #| echo: true
 #| output-location: fragment
-dateVec <- c(as.Date("2023-11-28"),
-             as.Date("2023-12-22"),
-             Sys.Date())
-dateVec
+costs <- c(treatment_A = 5000, treatment_B = 3000, treatment_C = 7000)
+
+costs
 ```
 
 ```{r}
@@ -218,7 +235,7 @@ vec[5]
 ```{r}
 #| echo: true
 #| output-location: column-fragment
-mat <- matrix(1:20,
+mat <- matrix(1:36,
               nrow = 6,
               ncol = 6,
               byrow = F)
@@ -243,6 +260,38 @@ mat[,5]
 #| output-location: column-fragment
 mat[5,]
 ```
+
+## Multiplying Matrices {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+mat1 <- matrix(c(3, 5, 1, 9),
+               nrow = 2,
+               ncol = 2,
+               byrow = F)
+mat1
+```
+```{r}
+#| echo: true
+#| output-location: column-fragment
+mat2 <- matrix(c(7, 4, 2, 8),
+               nrow = 2,
+               ncol = 2,
+               byrow = F)
+mat2
+```
+
+. . .
+
+Multiplying the matrices with `%*%`
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+mat1 %*% mat2
+```
+
 
 ## Data Frames {auto-animate="true"}
 
@@ -390,6 +439,33 @@ data <- rio::import("files/data.csv") |>
 for (i in 1:nrow(data)) {
   bmi <- round(data$wt[i] / (((data$ht[i] / 100))^2), 2)
   cat("BMI of Record No", i, "is", bmi, "\n")
+}
+```
+
+# Conditional Logic {auto-animate="true"}
+
+```{r}
+#| eval: false
+#| echo: true
+if(condition) {
+  TRUE
+} else {
+  FALSE
+}
+```
+
+## Conditional Logic {auto-animate="true" visibility="uncounted"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| output-location: column-fragment
+value <- 5000
+
+if(value > 200) {
+  cat("High")
+} else {
+  cat("Low")
 }
 ```
 
