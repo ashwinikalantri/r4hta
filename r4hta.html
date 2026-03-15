@@ -9,9 +9,9 @@
 <link href="r4hta_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="author" content="Ashwini Kalantri">
+  <meta name="author" content="Dr Ashwini Kalantri">
   <meta name="dcterms.date" content="2026-03-17">
-  <title>Orientation to R</title>
+  <title>An Orientation to R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="r4hta_files/libs/revealjs/dist/theme/quarto-95dd93519e6012300ef914709e231f75.css">
+  <link rel="stylesheet" href="r4hta_files/libs/revealjs/dist/theme/quarto-6ad66629cd843f88a3d45f9839c862a3.css">
   <link href="r4hta_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="r4hta_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="r4hta_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -188,19 +188,22 @@
       margin-right: 0; 
     }
   </style>
+  <script src="r4hta_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="r4hta_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="r4hta_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Orientation to R</h1>
+  <h1 class="title">An Orientation to R</h1>
   <p class="subtitle">Getting comfortable with R and RStudio</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Ashwini Kalantri 
+Dr Ashwini Kalantri 
 </div>
         <p class="quarto-title-affiliation">
             Professor of Community Medicine, MGIMS, Sevagram
@@ -210,109 +213,108 @@ Ashwini Kalantri
 
   <p class="date">17 Mar 2026</p>
 </section>
-<section id="what-this-session-is-and-isnt" class="slide level2">
-<h2>What This Session Is (and Isn’t)</h2>
+<section id="warning" class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">⚠️ Warning ⚠️</h1>
 <p>This is <strong>not</strong> an R programming course.</p>
-<div class="fragment">
-<p>You do not need to memorise anything here.</p>
-</div>
-<div class="fragment">
-<p><strong>Goal:</strong> Build enough familiarity that when you see R code:</p>
-<ul>
-<li>You can recognise what it is doing</li>
-<li>You can change an input value</li>
-<li>You can run it and see output</li>
-<li>You are not intimidated by it</li>
-</ul>
-</div>
-<div class="fragment">
-<p>Think of this as learning to <strong>read a language</strong> well enough to follow a conversation — not to write poetry.</p>
-</div>
 </section>
-<section id="the-rstudio-interface" class="slide level2">
-<h2>The RStudio Interface</h2>
+
+<section id="goal" class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Goal</h1>
+<p>When you see R code:</p>
+<ul>
+<li>You are not <code>intimidated</code> by it</li>
+<li>You <code>recognise</code> what it is doing</li>
+<li>You can <code>run</code> it and see output</li>
+<li>You can <code>change</code> an input value</li>
+</ul>
+</section>
+
+<section>
+<section id="the-rstudio-interface" class="title-slide slide level1 center">
+<h1>The RStudio Interface</h1>
+
+</section>
+<section id="section" class="slide level2" data-auto-animate="true" data-visibility="uncounted" data-menu-title="The Rstudio Interface">
+<h2 data-id="quarto-animate-title"></h2>
 
 <img data-src="files/rstudio_1.png" class="r-stretch"></section>
-<section id="the-rstudio-interface-1" class="slide level2">
-<h2>The RStudio Interface</h2>
+<section id="section-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted" data-menu-title="The Rstudio Interface">
+<h2 data-id="quarto-animate-title"></h2>
 
-<img data-src="files/rstudio_2.png" class="r-stretch"></section>
-<section id="a-sneak-peek-into-positron" class="slide level2">
-<h2>A sneak peek into Positron</h2>
+<img data-src="files/rstudio_2.png" class="r-stretch"></section></section>
+<section>
+<section id="the-workflow" class="title-slide slide level1 center">
+<h1>The Workflow</h1>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-workflow">flowchart LR
+  A["&lt;b&gt;&lt;font size=6&gt;READ&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font size=6&gt;the code&lt;/font&gt;&lt;br/&gt;&lt;i&gt;&lt;font size=5&gt;(understand logic)&lt;/font&gt;&lt;/i&gt;"]:::blue --&gt; B["&lt;b&gt;&lt;font size=6&gt;MODIFY&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font size=6&gt;a parameter&lt;/font&gt;&lt;br/&gt;&lt;i&gt;&lt;font size=5&gt;(change a number)&lt;/font&gt;&lt;/i&gt;"]:::green --&gt; C["&lt;b&gt;&lt;font size=6&gt;RUN&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font size=6&gt;the chunk&lt;/font&gt;&lt;br/&gt;&lt;i&gt;&lt;font size=5&gt;(click play)&lt;/font&gt;&lt;/i&gt;"]:::orange --&gt; D["&lt;b&gt;&lt;font size=6&gt;INTERPRET&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font size=6&gt;the output&lt;/font&gt;&lt;br/&gt;&lt;i&gt;&lt;font size=5&gt;(what changed?)&lt;/font&gt;&lt;/i&gt;"]:::red
+  D -. "&lt;b&gt;&lt;font size=6&gt;Try again&lt;/font&gt;&lt;/b&gt;" .-&gt; B
 
-<img data-src="files/positron.png" class="r-stretch"></section>
-<section id="your-first-code" class="slide level2">
-<h2>Your first <code>code</code></h2>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">print</span>(<span class="st">"Coding for better health decisions."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
+classDef blue   fill:#4e79a7,color:#fff
+classDef green  fill:#59a14f,color:#fff
+classDef orange fill:#f28e2b,color:#fff
+classDef red    fill:#e15759,color:#fff
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The workshop workflow
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="working-with-.qmd-files" class="slide level2">
+<h2>Working with .qmd Files</h2>
+<p>All workshop materials are in <strong>Quarto (.qmd)</strong> files:</p>
+<ul>
+<li><strong>Text</strong> — explanations</li>
+<li><strong>Code chunks</strong> — grey blocks with R code</li>
+<li><strong>Outputs</strong> — results, tables, plots</li>
+</ul>
+<div class="fragment">
+<p><strong>To work with a .qmd file:</strong></p>
+<ol type="1">
+<li>Open it in RStudio</li>
+<li>Read the text explanations</li>
+<li>Run code chunks one at a time (click the green play button ▶)</li>
+<li>See the output appear below each chunk</li>
+<li>Modify values and re-run</li>
+</ol>
+</div>
+</section></section>
+<section id="your-first-code" class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Your first <code>code</code></h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="fu">print</span>(<span class="st">"Coding for better health decisions."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Coding for better health decisions."</code></pre>
 </div>
-</div></div>
+</div>
 </section>
-<section id="assignment" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Assignment</h2>
-<p><code>&lt;-</code></p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href=""></a>text1 <span class="ot">&lt;-</span> <span class="st">"Coding for better health decisions."</span></span>
-<span id="cb3-2" class="hljs-ln-code"><a href=""></a><span class="fu">print</span>(text1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
+
+<section id="assignment" class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Assignment</h1>
+<p>Assign a <code>value</code> to a <code>name</code> with <code>&lt;-</code> <span style="font-size: 0.75em; color: #888;"><em>(or <code>-&gt;</code>, <code>=</code>)</em></span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href=""></a>text <span class="ot">&lt;-</span> <span class="st">"Coding for better health decisions."</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a href=""></a><span class="fu">print</span>(text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Coding for better health decisions."</code></pre>
 </div>
-</div></div>
-<!-- `->` -->
-<!-- ```{r} -->
-<!-- #| echo: true -->
-<!-- #| output-location: column-fragment -->
-<!-- "Hello World!" -> text2 -->
-<!-- print(text2) -->
-<!-- ``` -->
-<!-- `=` -->
-<!-- ```{r} -->
-<!-- #| echo: true -->
-<!-- #| output-location: column-fragment -->
-<!-- text3 = "Hello World!" -->
-<!-- print(text3) -->
-<!-- ``` -->
+</div>
 </section>
-<section id="reserved-words" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Reserved Words</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<ul>
-<li>if</li>
-<li>else</li>
-<li>while</li>
-<li>repeat</li>
-<li>for</li>
-<li>function</li>
-<li>in</li>
-</ul>
-</div><div class="column" style="width:30%;">
-<ul>
-<li>next</li>
-<li>break</li>
-<li>TRUE</li>
-<li>FALSE</li>
-<li>NULL</li>
-<li>Inf</li>
-<li>NaN</li>
-</ul>
-</div><div class="column" style="width:30%;">
-<ul>
-<li>NA</li>
-<li>NA_integer</li>
-<li>NA_real</li>
-<li>NA_complex_</li>
-<li>NA_character_</li>
-<li>…</li>
-</ul>
-</div></div>
-</section>
+
 <section>
 <section id="operators" class="title-slide slide level1 center">
 <h1>Operators</h1>
@@ -356,9 +358,6 @@ Ashwini Kalantri
 <pre><code>[1] 28.66667</code></pre>
 </div>
 </div></div>
-</section>
-<section id="arithmetic-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Arithmetic</h2>
 <p>Exponentiation</p>
 <div class="cell columns column-output-location">
 <div class="column">
@@ -368,31 +367,22 @@ Ashwini Kalantri
 <pre><code>[1] 64</code></pre>
 </div>
 </div></div>
-<p>Modulus</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="dv">77</span><span class="sc">%%</span><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div></div>
 </section>
 <section id="relational" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Relational</h2>
 <p>Greater</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="dv">5</span> <span class="sc">&gt;</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="dv">5</span> <span class="sc">&gt;</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div></div>
-<p>Lesser</p>
+<p>Less than</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="dv">5</span> <span class="sc">&lt;</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="dv">5</span> <span class="sc">&lt;</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
@@ -401,7 +391,7 @@ Ashwini Kalantri
 <p>Equal</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="dv">6</span> <span class="sc">==</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="dv">6</span> <span class="sc">==</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
@@ -413,16 +403,16 @@ Ashwini Kalantri
 <p>Greater or equal</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="dv">8</span> <span class="sc">&gt;=</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="dv">8</span> <span class="sc">&gt;=</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div></div>
-<p>Lesser or equal</p>
+<p>Less than or equal</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="dv">7</span> <span class="sc">&lt;=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="dv">7</span> <span class="sc">&lt;=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
@@ -431,181 +421,12 @@ Ashwini Kalantri
 <p>Not Equal</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="dv">9</span> <span class="sc">!=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="dv">9</span> <span class="sc">!=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div></div>
-</section>
-<section id="joining-logical" class="slide level2">
-<h2>Joining Logical</h2>
-<p><code>AND</code></p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="cn">FALSE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div></div>
-<p><code>OR</code></p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a><span class="cn">FALSE</span> <span class="sc">|</span> <span class="cn">FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div></div>
-</section>
-<section id="classes" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Classes</h2>
-<p>Integer</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>int <span class="ot">&lt;-</span> <span class="dv">3</span>L</span>
-<span id="cb41-2"><a href=""></a><span class="fu">print</span>(int)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">class</span>(int)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "integer"</code></pre>
-</div>
-</div></div>
-<p>Numeric</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a>num <span class="ot">&lt;-</span> <span class="fl">4.3</span></span>
-<span id="cb45-2"><a href=""></a><span class="fu">print</span>(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.3</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a><span class="fu">class</span>(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "numeric"</code></pre>
-</div>
-</div></div>
-<p>Character</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a>name <span class="ot">&lt;-</span> <span class="st">"Your Name"</span></span>
-<span id="cb49-2"><a href=""></a><span class="fu">print</span>(name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Your Name"</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href=""></a><span class="fu">class</span>(name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "character"</code></pre>
-</div>
-</div></div>
-</section>
-<section id="classes-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Classes</h2>
-<p>Logical</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href=""></a>logT <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb53-2"><a href=""></a>logF <span class="ot">&lt;-</span> F</span>
-<span id="cb53-3"><a href=""></a><span class="fu">print</span>(logF)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href=""></a><span class="fu">class</span>(logF)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "logical"</code></pre>
-</div>
-</div></div>
-<p>Date</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href=""></a>date1 <span class="ot">&lt;-</span> <span class="st">"2023-12-18"</span></span>
-<span id="cb57-2"><a href=""></a>date2 <span class="ot">&lt;-</span> <span class="dv">2023-12-18</span></span>
-<span id="cb57-3"><a href=""></a>date3 <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-18"</span>)</span>
-<span id="cb57-4"><a href=""></a>date4 <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"18 Dec 2023"</span>,<span class="st">"%d %b %Y"</span>)</span>
-<span id="cb57-5"><a href=""></a>date5 <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="dv">45076</span>, <span class="at">origin =</span> <span class="st">"1900-01-01"</span>)</span>
-<span id="cb57-6"><a href=""></a><span class="fu">print</span>(date1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-12-18"</code></pre>
-</div>
-</div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href=""></a><span class="fu">class</span>(date1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "character"</code></pre>
-</div>
-</div></div>
-</section>
-<section id="class-conversion" class="slide level2" data-auto-animate="&quot;true">
-<h2 data-id="quarto-animate-title">Class Conversion</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb61-1" class="hljs-ln-code"><a href=""></a>num <span class="ot">&lt;-</span> <span class="st">"1"</span></span>
-<span id="cb61-2" class="hljs-ln-code"><a href=""></a>num <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(num)</span>
-<span id="cb61-3" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb61-4" class="hljs-ln-code"><a href=""></a>numLet <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(LETTERS)</span>
-<span id="cb61-5" class="hljs-ln-code"><a href=""></a>charNum <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
-<span id="cb61-6" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb61-7" class="hljs-ln-code"><a href=""></a>tf <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"TRUE"</span>,<span class="st">"FALSE"</span>,<span class="st">"FALSE"</span>)</span>
-<span id="cb61-8" class="hljs-ln-code"><a href=""></a>tf <span class="ot">&lt;-</span> <span class="fu">as.logical</span>(tf)</span>
-<span id="cb61-9" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb61-10" class="hljs-ln-code"><a href=""></a>num <span class="ot">&lt;-</span> <span class="fu">as.character</span>(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section></section>
 <section>
 <section id="objects" class="title-slide slide level1 center" data-auto-animate="true" data-visibility="uncounted">
@@ -615,32 +436,24 @@ Ashwini Kalantri
 <section id="vectors" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Vectors</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href=""></a>vec1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">3</span>,<span class="fl">5.5</span>)</span>
-<span id="cb62-2"><a href=""></a>vec2 <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb62-3"><a href=""></a></span>
-<span id="cb62-4"><a href=""></a><span class="co">#combining vectors</span></span>
-<span id="cb62-5"><a href=""></a>newVec <span class="ot">&lt;-</span> <span class="fu">c</span>(vec1,vec2)</span>
-<span id="cb62-6"><a href=""></a></span>
-<span id="cb62-7"><a href=""></a>newVec</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="fl">5.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a>dateVec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">"2023-11-28"</span>),</span>
+<span id="cb28-2"><a href=""></a>             <span class="fu">as.Date</span>(<span class="st">"2023-12-22"</span>),</span>
+<span id="cb28-3"><a href=""></a>             <span class="fu">Sys.Date</span>())</span>
+<span id="cb28-4"><a href=""></a>dateVec</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.0 4.0 6.0 8.0 3.0 5.5 4.0</code></pre>
+<pre><code>[1] "2023-11-28" "2023-12-22" "2026-03-15"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href=""></a>dateVec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">"2023-11-28"</span>),</span>
-<span id="cb64-2"><a href=""></a>             <span class="fu">as.Date</span>(<span class="st">"2023-12-22"</span>),</span>
-<span id="cb64-3"><a href=""></a>             <span class="fu">Sys.Date</span>())</span>
-<span id="cb64-4"><a href=""></a>dateVec</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-11-28" "2023-12-22" "2026-03-12"</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href=""></a>newVec[<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a>vec[<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -652,91 +465,78 @@ Ashwini Kalantri
 <h2 data-id="quarto-animate-title">Matrix</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href=""></a>let <span class="ot">&lt;-</span> <span class="fu">matrix</span>(LETTERS,</span>
-<span id="cb68-2"><a href=""></a>              <span class="at">nrow =</span> <span class="dv">6</span>,</span>
-<span id="cb68-3"><a href=""></a>              <span class="at">ncol =</span> <span class="dv">6</span>,</span>
-<span id="cb68-4"><a href=""></a>              <span class="at">byrow =</span> F)</span>
-<span id="cb68-5"><a href=""></a></span>
-<span id="cb68-6"><a href=""></a>let</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>,</span>
+<span id="cb32-2"><a href=""></a>              <span class="at">nrow =</span> <span class="dv">6</span>,</span>
+<span id="cb32-3"><a href=""></a>              <span class="at">ncol =</span> <span class="dv">6</span>,</span>
+<span id="cb32-4"><a href=""></a>              <span class="at">byrow =</span> F)</span>
+<span id="cb32-5"><a href=""></a></span>
+<span id="cb32-6"><a href=""></a>mat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,] "A"  "G"  "M"  "S"  "Y"  "E" 
-[2,] "B"  "H"  "N"  "T"  "Z"  "F" 
-[3,] "C"  "I"  "O"  "U"  "A"  "G" 
-[4,] "D"  "J"  "P"  "V"  "B"  "H" 
-[5,] "E"  "K"  "Q"  "W"  "C"  "I" 
-[6,] "F"  "L"  "R"  "X"  "D"  "J" </code></pre>
+[1,]    1    7   13   19    5   11
+[2,]    2    8   14   20    6   12
+[3,]    3    9   15    1    7   13
+[4,]    4   10   16    2    8   14
+[5,]    5   11   17    3    9   15
+[6,]    6   12   18    4   10   16</code></pre>
 </div>
 </div></div>
+<div class="fragment">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href=""></a>let[<span class="dv">3</span>,<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a>mat[<span class="dv">3</span>,<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "A"</code></pre>
+<pre><code>[1] 7</code></pre>
 </div>
 </div></div>
+</div>
+<div class="fragment">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href=""></a>let[,<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a>mat[,<span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Y" "Z" "A" "B" "C" "D"</code></pre>
+<pre><code>[1]  5  6  7  8  9 10</code></pre>
 </div>
 </div></div>
+</div>
+<div class="fragment">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href=""></a>let[<span class="dv">5</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a>mat[<span class="dv">5</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "E" "K" "Q" "W" "C" "I"</code></pre>
+<pre><code>[1]  5 11 17  3  9 15</code></pre>
 </div>
 </div></div>
-</section>
-<section id="factor" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Factor</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb76-1" class="hljs-ln-code"><a href=""></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb76-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb76-3" class="hljs-ln-code"><a href=""></a>genFac <span class="ot">&lt;-</span> <span class="fu">factor</span>(gender,</span>
-<span id="cb76-4" class="hljs-ln-code"><a href=""></a>                 <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),</span>
-<span id="cb76-5" class="hljs-ln-code"><a href=""></a>                 <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>,<span class="st">"Female"</span>))</span>
-<span id="cb76-6" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb76-7" class="hljs-ln-code"><a href=""></a>genFac</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] Male   Female Female Male   Male   Male   Female Female Male   Female
-[11] Male  
-Levels: Male Female</code></pre>
-</div>
 </div>
 </section>
 <section id="data-frames" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Data Frames</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb78-1" class="hljs-ln-code"><a href=""></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">24</span>,<span class="cn">NA</span>,<span class="dv">23</span>,<span class="dv">65</span>,<span class="dv">33</span>) <span class="co"># create age vector</span></span>
-<span id="cb78-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb78-3" class="hljs-ln-code"><a href=""></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"M"</span>,<span class="st">"F"</span>,<span class="st">"F"</span>,<span class="st">"M"</span>,<span class="st">"M"</span>,<span class="st">"F"</span>) <span class="co">#create gender vector</span></span>
-<span id="cb78-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb78-5" class="hljs-ln-code"><a href=""></a>occu <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>), <span class="co">#occupation </span></span>
-<span id="cb78-6" class="hljs-ln-code"><a href=""></a>               <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>),</span>
-<span id="cb78-7" class="hljs-ln-code"><a href=""></a>               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Unemp"</span>,<span class="st">"Service"</span>,<span class="st">"Student"</span>,<span class="st">"Business"</span>,<span class="st">"Prof"</span>))</span>
-<span id="cb78-8" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb78-9" class="hljs-ln-code"><a href=""></a><span class="co">#date of birth</span></span>
-<span id="cb78-10" class="hljs-ln-code"><a href=""></a>dob <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">"1993-01-16"</span>),<span class="fu">as.Date</span>(<span class="st">"1963-12-24"</span>),<span class="fu">as.Date</span>(<span class="st">"1971-01-05"</span>),</span>
-<span id="cb78-11" class="hljs-ln-code"><a href=""></a>         <span class="fu">as.Date</span>(<span class="st">"1982-11-11"</span>),<span class="fu">as.Date</span>(<span class="st">"1984-05-15"</span>),<span class="fu">as.Date</span>(<span class="st">"1999-03-07"</span>))</span>
-<span id="cb78-12" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb78-13" class="hljs-ln-code"><a href=""></a><span class="co">#create data frame</span></span>
-<span id="cb78-14" class="hljs-ln-code"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(age,gender,occu,dob)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb40-1" class="hljs-ln-code"><a href=""></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">24</span>,<span class="cn">NA</span>,<span class="dv">23</span>,<span class="dv">65</span>,<span class="dv">33</span>) <span class="co"># create age vector</span></span>
+<span id="cb40-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb40-3" class="hljs-ln-code"><a href=""></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"M"</span>,<span class="st">"F"</span>,<span class="st">"F"</span>,<span class="st">"M"</span>,<span class="st">"M"</span>,<span class="st">"F"</span>) <span class="co">#create gender vector</span></span>
+<span id="cb40-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb40-5" class="hljs-ln-code"><a href=""></a>occu <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>), <span class="co">#occupation </span></span>
+<span id="cb40-6" class="hljs-ln-code"><a href=""></a>               <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>),</span>
+<span id="cb40-7" class="hljs-ln-code"><a href=""></a>               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Unemp"</span>,<span class="st">"Service"</span>,<span class="st">"Student"</span>,<span class="st">"Business"</span>,<span class="st">"Prof"</span>))</span>
+<span id="cb40-8" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb40-9" class="hljs-ln-code"><a href=""></a><span class="co">#date of birth</span></span>
+<span id="cb40-10" class="hljs-ln-code"><a href=""></a>dob <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">"1993-01-16"</span>),<span class="fu">as.Date</span>(<span class="st">"1963-12-24"</span>),<span class="fu">as.Date</span>(<span class="st">"1971-01-05"</span>),</span>
+<span id="cb40-11" class="hljs-ln-code"><a href=""></a>         <span class="fu">as.Date</span>(<span class="st">"1982-11-11"</span>),<span class="fu">as.Date</span>(<span class="st">"1984-05-15"</span>),<span class="fu">as.Date</span>(<span class="st">"1999-03-07"</span>))</span>
+<span id="cb40-12" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb40-13" class="hljs-ln-code"><a href=""></a><span class="co">#create data frame</span></span>
+<span id="cb40-14" class="hljs-ln-code"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(age,gender,occu,dob)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="data-frames-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
 <h2 data-id="quarto-animate-title">Data Frames</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href=""></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>  age gender     occu        dob
@@ -748,164 +548,46 @@ Levels: Male Female</code></pre>
 6  33      F     Prof 1999-03-07</code></pre>
 </div>
 </div></div>
+<div class="fragment">
+<p>Accessing variables with <code>$</code></p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href=""></a>df[<span class="dv">2</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a>df<span class="sc">$</span>age</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>  age gender     occu        dob
-2  24      F Business 1963-12-24</code></pre>
+<pre><code>[1] 12 24 NA 23 65 33</code></pre>
 </div>
 </div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href=""></a>df[,<span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "M" "F" "F" "M" "M" "F"</code></pre>
 </div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href=""></a>df[<span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>  gender
-1      M
-2      F
-3      F
-4      M
-5      M
-6      F</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href=""></a>df[<span class="dv">2</span>,<span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1963-12-24"</code></pre>
-</div>
-</div></div>
-</section>
-<section id="list" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">List</h2>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb89-1" class="hljs-ln-code"><a href=""></a>list <span class="ot">&lt;-</span> <span class="fu">list</span>(df,dob,let,newVec)</span>
-<span id="cb89-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb89-3" class="hljs-ln-code"><a href=""></a>list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1]]
-  age gender     occu        dob
-1  12      M    Unemp 1993-01-16
-2  24      F Business 1963-12-24
-3  NA      F  Student 1971-01-05
-4  23      M  Service 1982-11-11
-5  65      M Business 1984-05-15
-6  33      F     Prof 1999-03-07
-
-[[2]]
-[1] "1993-01-16" "1963-12-24" "1971-01-05" "1982-11-11" "1984-05-15"
-[6] "1999-03-07"
-
-[[3]]
-     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,] "A"  "G"  "M"  "S"  "Y"  "E" 
-[2,] "B"  "H"  "N"  "T"  "Z"  "F" 
-[3,] "C"  "I"  "O"  "U"  "A"  "G" 
-[4,] "D"  "J"  "P"  "V"  "B"  "H" 
-[5,] "E"  "K"  "Q"  "W"  "C"  "I" 
-[6,] "F"  "L"  "R"  "X"  "D"  "J" 
-
-[[4]]
-[1] 2.0 4.0 6.0 8.0 3.0 5.5 4.0</code></pre>
-</div>
-</div></div>
-</section>
-<section id="list-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">List</h2>
-<p>List with nth object(s)</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href=""></a>list[<span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1]]
-[1] "1993-01-16" "1963-12-24" "1971-01-05" "1982-11-11" "1984-05-15"
-[6] "1999-03-07"</code></pre>
-</div>
-</div></div>
-<p>nth object</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href=""></a>list[[<span class="dv">2</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1993-01-16" "1963-12-24" "1971-01-05" "1982-11-11" "1984-05-15"
-[6] "1999-03-07"</code></pre>
-</div>
-</div></div>
-<p>selecting withing object</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href=""></a>list[[<span class="dv">2</span>]][<span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1982-11-11"</code></pre>
-</div>
-</div></div>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href=""></a>list[[<span class="dv">1</span>]][<span class="dv">2</span>,<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Business
-Levels: Unemp Service Student Business Prof</code></pre>
-</div>
-</div></div>
 </section></section>
 <section>
 <section id="functions" class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Functions</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb99-1" class="hljs-ln-code"><a href=""></a><span class="fu">function_name</span>(<span class="at">argument1 =</span> value1, <span class="at">argument2 =</span> value2, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb45-1" class="hljs-ln-code"><a href=""></a><span class="fu">function_name</span>(<span class="at">argument1 =</span> value1, <span class="at">argument2 =</span> value2, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="functions-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
 <h2 data-id="quarto-animate-title">Functions</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb100-1" class="hljs-ln-code"><a href=""></a>addition <span class="ot">&lt;-</span> <span class="cf">function</span>(n1,n2){</span>
-<span id="cb100-2" class="hljs-ln-code"><a href=""></a>  n1 <span class="sc">+</span> n2</span>
-<span id="cb100-3" class="hljs-ln-code"><a href=""></a>}</span>
-<span id="cb100-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb100-5" class="hljs-ln-code"><a href=""></a>div <span class="ot">&lt;-</span> <span class="cf">function</span>(n1,n2){</span>
-<span id="cb100-6" class="hljs-ln-code"><a href=""></a>  n1 <span class="sc">/</span> n2</span>
-<span id="cb100-7" class="hljs-ln-code"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-
-</div></div>
-</section>
-<section id="functions-2" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Functions</h2>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb101-1" class="hljs-ln-code"><a href=""></a><span class="fu">div</span>(<span class="at">n1 =</span> <span class="dv">55</span>,<span class="at">n2 =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb46-1" class="hljs-ln-code"><a href=""></a><span class="fu">mean</span>(<span class="at">x =</span> df<span class="sc">$</span>age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 18.33333</code></pre>
+<pre><code>[1] 31.4</code></pre>
 </div>
 </div></div>
 </section></section>
 <section id="packages" class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Packages</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb103-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb103-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb103-3" class="hljs-ln-code"><a href=""></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb49-2"><a href=""></a></span>
+<span id="cb49-3"><a href=""></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 6
@@ -916,170 +598,306 @@ $ occu   &lt;fct&gt; Unemp, Business, Student, Service, Business, Prof
 $ dob    &lt;date&gt; 1993-01-16, 1963-12-24, 1971-01-05, 1982-11-11, 1984-05-15, 199…</code></pre>
 </div>
 </div></div>
+<div class="fragment">
+<p>Install once, load every time</p>
+</div>
 </section>
 
-<section id="working-directory" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Working Directory</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb105-1" class="hljs-ln-code"><a href=""></a><span class="fu">setwd</span>(<span class="st">"~/r4ph24"</span>) <span class="co">#Mac, Linux, Unix</span></span>
-<span id="cb105-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb105-3" class="hljs-ln-code"><a href=""></a><span class="fu">setwd</span>(<span class="st">"C:/user/ashwini/documents/r4ph24"</span>) <span class="co">#Windows</span></span>
-<span id="cb105-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb105-5" class="hljs-ln-code"><a href=""></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="pipes" class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Pipes</h1>
+<p><code>|&gt;</code> or <code>%&gt;%</code></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb51-1" class="hljs-ln-code"><a href=""></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb51-2" class="hljs-ln-code"><a href=""></a>  <span class="fu">select</span>(age, dob, occu) <span class="sc">|&gt;</span> </span>
+<span id="cb51-3" class="hljs-ln-code"><a href=""></a>  <span class="fu">summarise</span>(</span>
+<span id="cb51-4" class="hljs-ln-code"><a href=""></a>    <span class="at">mean_age =</span> <span class="fu">mean</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb51-5" class="hljs-ln-code"><a href=""></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  mean_age
+1     31.4</code></pre>
+</div>
+</div>
 </section>
 
-<section id="projects" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Projects</h1>
-
-</section>
-
-<section>
-<section id="scripts" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Scripts</h1>
-<ul>
-<li>Names</li>
-<li>Spaces</li>
-<li>Pipes</li>
-<li>Comments</li>
-</ul>
-</section>
-<section id="names" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Names</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb106-1" class="hljs-ln-code"><a href=""></a><span class="co"># Strive for:</span></span>
-<span id="cb106-2" class="hljs-ln-code"><a href=""></a>young_age <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">filter</span>(age <span class="sc">&lt;</span> <span class="dv">20</span>)</span>
-<span id="cb106-3" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb106-4" class="hljs-ln-code"><a href=""></a><span class="co"># Avoid:</span></span>
-<span id="cb106-5" class="hljs-ln-code"><a href=""></a>YOUNGAGE <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span>  <span class="fu">filter</span>(age <span class="sc">&lt;</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="spaces" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Spaces</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb107-1" class="hljs-ln-code"><a href=""></a><span class="co"># Strive for</span></span>
-<span id="cb107-2" class="hljs-ln-code"><a href=""></a>z <span class="ot">&lt;-</span> (a <span class="sc">+</span> b)<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> d</span>
-<span id="cb107-3" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb107-4" class="hljs-ln-code"><a href=""></a><span class="co"># Avoid</span></span>
-<span id="cb107-5" class="hljs-ln-code"><a href=""></a>z<span class="ot">&lt;-</span>( a <span class="sc">+</span> b ) <span class="sc">^</span> <span class="dv">2</span><span class="sc">/</span>d</span>
-<span id="cb107-6" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb107-7" class="hljs-ln-code"><a href=""></a><span class="co"># Strive for</span></span>
-<span id="cb107-8" class="hljs-ln-code"><a href=""></a>mean_age <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb107-9" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb107-10" class="hljs-ln-code"><a href=""></a><span class="co"># Avoid</span></span>
-<span id="cb107-11" class="hljs-ln-code"><a href=""></a>mean_age<span class="ot">&lt;-</span><span class="fu">mean</span> (df<span class="sc">$</span>age ,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="pipes" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Pipes</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb108-1" class="hljs-ln-code"><a href=""></a><span class="co"># Avoid</span></span>
-<span id="cb108-2" class="hljs-ln-code"><a href=""></a>pipe <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">select</span>(age,dob,occu) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">age_cat =</span> <span class="fu">if_else</span>(age <span class="sc">&lt;</span> <span class="dv">20</span>,<span class="st">"Young"</span>,<span class="st">"Old"</span>))</span>
-<span id="cb108-3" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb108-4" class="hljs-ln-code"><a href=""></a><span class="co"># Strive for</span></span>
-<span id="cb108-5" class="hljs-ln-code"><a href=""></a>pipe <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb108-6" class="hljs-ln-code"><a href=""></a>  <span class="fu">select</span>(age, dob, occu) <span class="sc">%&gt;%</span></span>
-<span id="cb108-7" class="hljs-ln-code"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">age_cat =</span> <span class="fu">if_else</span>(age <span class="sc">&lt;</span> <span class="dv">20</span>, <span class="st">"Young"</span>, <span class="st">"Old"</span>))</span>
-<span id="cb108-8" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb108-9" class="hljs-ln-code"><a href=""></a><span class="co"># Avoid</span></span>
-<span id="cb108-10" class="hljs-ln-code"><a href=""></a>pipe <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb108-11" class="hljs-ln-code"><a href=""></a>  <span class="fu">select</span>(age, dob, occu) <span class="sc">%&gt;%</span></span>
-<span id="cb108-12" class="hljs-ln-code"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">age_cat =</span> <span class="fu">mean</span>(</span>
-<span id="cb108-13" class="hljs-ln-code"><a href=""></a>                            age,</span>
-<span id="cb108-14" class="hljs-ln-code"><a href=""></a>                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb108-15" class="hljs-ln-code"><a href=""></a>                          )</span>
-<span id="cb108-16" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb108-17" class="hljs-ln-code"><a href=""></a><span class="co"># Strive for</span></span>
-<span id="cb108-18" class="hljs-ln-code"><a href=""></a>pipe <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb108-19" class="hljs-ln-code"><a href=""></a>  <span class="fu">select</span>(age, dob, occu) <span class="sc">%&gt;%</span></span>
-<span id="cb108-20" class="hljs-ln-code"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">age_cat =</span> <span class="fu">mean</span>(</span>
-<span id="cb108-21" class="hljs-ln-code"><a href=""></a>    age,</span>
-<span id="cb108-22" class="hljs-ln-code"><a href=""></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb108-23" class="hljs-ln-code"><a href=""></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="commenting" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Commenting</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href=""></a><span class="co"># Print the text "Hello World"</span></span>
-<span id="cb109-2"><a href=""></a><span class="fu">print</span>(<span class="st">"Hello World!"</span>)</span>
-<span id="cb109-3"><a href=""></a></span>
-<span id="cb109-4"><a href=""></a><span class="fu">print</span>(<span class="st">"Hello World!"</span>) <span class="co"># Print the text "Hello World"</span></span>
-<span id="cb109-5"><a href=""></a></span>
-<span id="cb109-6"><a href=""></a><span class="co"># Multi-line comment</span></span>
-<span id="cb109-7"><a href=""></a><span class="co"># about printing the text "Hello World"</span></span>
-<span id="cb109-8"><a href=""></a><span class="fu">print</span>(<span class="st">"Hello World!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<h5 id="sections">Sections</h5>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href=""></a><span class="co"># Section 1 ####</span></span>
-<span id="cb110-2"><a href=""></a><span class="fu">print</span>(<span class="st">"Section 1"</span>)</span>
-<span id="cb110-3"><a href=""></a></span>
-<span id="cb110-4"><a href=""></a><span class="do">## Sub Section ####</span></span>
-<span id="cb110-5"><a href=""></a><span class="fu">print</span>(<span class="st">"Sub section"</span>)</span>
-<span id="cb110-6"><a href=""></a></span>
-<span id="cb110-7"><a href=""></a><span class="co"># Section 2 ####</span></span>
-<span id="cb110-8"><a href=""></a><span class="fu">print</span>(<span class="st">"Section 2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section></section>
 <section>
 <section id="importing-data" class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Importing Data</h1>
 
 </section>
-<section id="csv" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">CSV</h2>
+<section id="importing-data-with-gui" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
+<h2 data-id="quarto-animate-title">Importing Data with GUI</h2>
+
+<img data-src="files/import.png" class="r-stretch"></section>
+<section id="importing-data-with-code" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
+<h2 data-id="quarto-animate-title">Importing Data with Code</h2>
+<p>CSV</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb111-1" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"files/data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"files/data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section>
-<section id="excel" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Excel</h2>
+<p>Excel</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb112-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(readxl)</span>
-<span id="cb112-2" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/data.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href=""></a><span class="fu">library</span>(readxl)</span>
+<span id="cb54-2"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/data.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section>
-<section id="stata-spss" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Stata, SPSS</h2>
+<p>Stata, SPSS</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb113-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(haven)</span>
-<span id="cb113-2" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"files/data.sav"</span>)</span>
-<span id="cb113-3" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"files/data.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href=""></a><span class="fu">library</span>(haven)</span>
+<span id="cb55-2"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"files/data.sav"</span>)</span>
+<span id="cb55-3"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"files/data.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="a-swiss-army-knife-for-data-io" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
 <h2 data-id="quarto-animate-title">A Swiss-Army Knife for Data I/O</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb114-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(rio)</span>
-<span id="cb114-2" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.xlsx"</span>)</span>
-<span id="cb114-3" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.csv"</span>)</span>
-<span id="cb114-4" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.sav"</span>)</span>
-<span id="cb114-5" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb56-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(rio)</span>
+<span id="cb56-2" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.xlsx"</span>)</span>
+<span id="cb56-3" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.csv"</span>)</span>
+<span id="cb56-4" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.sav"</span>)</span>
+<span id="cb56-5" class="hljs-ln-code"><a href=""></a>data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">"files/data.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section></section>
+<section>
+<section id="loops" class="title-slide slide level1 center">
+<h1>Loops</h1>
+
+</section>
+<section id="for-loops" class="slide level2">
+<h2>For loops</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(data)) {</span>
+<span id="cb57-2"><a href=""></a>  bmi <span class="ot">&lt;-</span> <span class="fu">round</span>(data<span class="sc">$</span>wt[i] <span class="sc">/</span> (((data<span class="sc">$</span>ht[i] <span class="sc">/</span> <span class="dv">100</span>))<span class="sc">^</span><span class="dv">2</span>), <span class="dv">2</span>)</span>
+<span id="cb57-3"><a href=""></a>  <span class="fu">cat</span>(<span class="st">"BMI of Record No"</span>, i, <span class="st">"is"</span>, bmi, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb57-4"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>BMI of Record No 1 is 21.63 
+BMI of Record No 2 is 20.62 
+BMI of Record No 3 is 23.7 
+BMI of Record No 4 is 15.62 
+BMI of Record No 5 is NA 
+BMI of Record No 6 is 18.76 
+BMI of Record No 7 is 14.2 
+BMI of Record No 8 is 27.02 
+BMI of Record No 9 is 19.72 
+BMI of Record No 10 is 21.22 
+BMI of Record No 11 is 22.52 
+BMI of Record No 12 is 24.08 
+BMI of Record No 13 is 15.01 
+BMI of Record No 14 is 16.43 
+BMI of Record No 15 is 21.66 
+BMI of Record No 16 is 15.87 
+BMI of Record No 17 is NA 
+BMI of Record No 18 is 17.63 
+BMI of Record No 19 is 15.78 
+BMI of Record No 20 is 17.21 
+BMI of Record No 21 is 16.44 
+BMI of Record No 22 is 20.54 
+BMI of Record No 23 is 18.32 
+BMI of Record No 24 is 21.71 
+BMI of Record No 25 is 13.78 
+BMI of Record No 26 is 20.72 
+BMI of Record No 27 is 29.63 
+BMI of Record No 28 is 16.34 
+BMI of Record No 29 is 20.77 
+BMI of Record No 30 is 17.79 
+BMI of Record No 31 is 18.06 
+BMI of Record No 32 is 20.62 
+BMI of Record No 33 is 22.58 
+BMI of Record No 34 is 19.58 
+BMI of Record No 35 is 26.12 
+BMI of Record No 36 is 18.31 
+BMI of Record No 37 is 29.66 
+BMI of Record No 38 is 18.63 
+BMI of Record No 39 is 22.35 
+BMI of Record No 40 is 20.96 
+BMI of Record No 41 is 17.44 
+BMI of Record No 42 is 14.61 
+BMI of Record No 43 is 18.25 
+BMI of Record No 44 is 19.17 
+BMI of Record No 45 is 18.45 
+BMI of Record No 46 is 23.62 
+BMI of Record No 47 is 29.97 
+BMI of Record No 48 is 17.41 
+BMI of Record No 49 is 18.63 
+BMI of Record No 50 is 24.44 
+BMI of Record No 51 is 17.74 
+BMI of Record No 52 is 16.76 
+BMI of Record No 53 is 19.69 
+BMI of Record No 54 is 16.57 
+BMI of Record No 55 is 15.15 
+BMI of Record No 56 is 27.96 
+BMI of Record No 57 is NA 
+BMI of Record No 58 is 18.25 
+BMI of Record No 59 is 15.58 
+BMI of Record No 60 is 18.13 
+BMI of Record No 61 is 15.95 
+BMI of Record No 62 is 14.18 
+BMI of Record No 63 is 19.47 
+BMI of Record No 64 is 24.08 
+BMI of Record No 65 is 18.62 
+BMI of Record No 66 is 18.07 
+BMI of Record No 67 is 16.94 
+BMI of Record No 68 is 18.01 
+BMI of Record No 69 is 21.54 
+BMI of Record No 70 is 17.84 
+BMI of Record No 71 is 18.78 
+BMI of Record No 72 is 27.89 
+BMI of Record No 73 is NA 
+BMI of Record No 74 is 16.23 
+BMI of Record No 75 is 20.93 
+BMI of Record No 76 is 18.83 
+BMI of Record No 77 is 16.45 
+BMI of Record No 78 is 21.38 
+BMI of Record No 79 is 26.78 
+BMI of Record No 80 is 15.64 
+BMI of Record No 81 is 15.88 
+BMI of Record No 82 is 16.44 
+BMI of Record No 83 is 21.5 
+BMI of Record No 84 is 23.77 
+BMI of Record No 85 is 26.23 
+BMI of Record No 86 is 22.52 
+BMI of Record No 87 is 15.85 
+BMI of Record No 88 is 17.37 
+BMI of Record No 89 is 28.52 
+BMI of Record No 90 is 19.71 
+BMI of Record No 91 is 31.39 
+BMI of Record No 92 is 15.45 
+BMI of Record No 93 is 12.11 
+BMI of Record No 94 is 21.8 
+BMI of Record No 95 is 24.86 
+BMI of Record No 96 is 18.99 
+BMI of Record No 97 is 24.38 
+BMI of Record No 98 is 15.84 
+BMI of Record No 99 is NA 
+BMI of Record No 100 is 16.69 
+BMI of Record No 101 is 20.01 
+BMI of Record No 102 is 23.77 
+BMI of Record No 103 is 18.7 
+BMI of Record No 104 is 23.35 
+BMI of Record No 105 is 18.8 
+BMI of Record No 106 is 28.97 
+BMI of Record No 107 is 26.91 
+BMI of Record No 108 is 15.45 
+BMI of Record No 109 is 20.78 
+BMI of Record No 110 is 24.98 
+BMI of Record No 111 is 17.23 
+BMI of Record No 112 is 15.52 
+BMI of Record No 113 is 26.79 
+BMI of Record No 114 is 21.61 
+BMI of Record No 115 is 20.35 
+BMI of Record No 116 is 18.09 
+BMI of Record No 117 is 21.1 
+BMI of Record No 118 is 19.5 
+BMI of Record No 119 is 15.04 
+BMI of Record No 120 is 17.1 
+BMI of Record No 121 is 17 
+BMI of Record No 122 is 18.55 
+BMI of Record No 123 is 21.34 
+BMI of Record No 124 is 21.33 
+BMI of Record No 125 is 17.21 
+BMI of Record No 126 is 16.98 
+BMI of Record No 127 is 16.36 
+BMI of Record No 128 is NA 
+BMI of Record No 129 is 27.63 
+BMI of Record No 130 is 24.23 
+BMI of Record No 131 is 17.74 
+BMI of Record No 132 is 21.28 
+BMI of Record No 133 is 18.87 
+BMI of Record No 134 is 19.58 
+BMI of Record No 135 is 28.63 
+BMI of Record No 136 is 23.96 
+BMI of Record No 137 is 28.41 
+BMI of Record No 138 is 23.86 
+BMI of Record No 139 is 27.67 
+BMI of Record No 140 is 16.28 
+BMI of Record No 141 is 21.83 
+BMI of Record No 142 is 15.47 
+BMI of Record No 143 is 26.42 
+BMI of Record No 144 is 22.58 
+BMI of Record No 145 is 16.15 
+BMI of Record No 146 is 20.54 
+BMI of Record No 147 is 25.49 
+BMI of Record No 148 is 16.52 
+BMI of Record No 149 is 22.95 
+BMI of Record No 150 is 18.08 </code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="graphs" class="title-slide slide level1 center">
+<h1>Graphs</h1>
+
+</section>
+<section id="ggplot" class="slide level2">
+<h2>ggplot</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb59-2"><a href=""></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> ht, <span class="at">y =</span> wt, <span class="at">colour =</span> bmi)) <span class="sc">+</span></span>
+<span id="cb59-3"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb59-4"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Height"</span>, <span class="at">y =</span> <span class="st">"Weight"</span>, <span class="at">title =</span> <span class="st">"Height vs Weight"</span>) <span class="sc">+</span></span>
+<span id="cb59-5"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="r4hta_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
-<section id="loops" class="slide level2">
-<h2>Loops</h2>
-<!-- # Tidy Data {auto-animate="true"} -->
-<!-- ## Tidy Data {auto-animate="true" visibility="uncounted"} -->
-<!-- 1.  Each variable is a column; each column is a variable. -->
-<!-- 2.  Each observation is a row; each row is an observation. -->
-<!-- 3.  Each value is a cell; each cell is a single value. -->
-<!-- ![](files/tidy-1.png) -->
-<!-- # Getting Help {auto-animate="true"} -->
-<!-- ## Help yourself {auto-animate="true" visibility="uncounted"} -->
-<!-- -   Read the manual -->
-<!-- -   Check your code -->
-<!-- -   Read the error message -->
-<!-- -   Web search -->
-<!-- -   Read the forums -->
-<!-- -   Rubber duck debugging -->
-<!-- ## Get Help {auto-animate="true" visibility="uncounted"} -->
-<!-- -   Ask a friend, colleague -->
-<!-- -   Post on the forums -->
-<!--     -   Describe your goal -->
-<!--     -   Be explicit about your question -->
-<!--     -   Provide specific information -->
-<!--     -   Be courteous -->
-<!--     -   Provide the solution if you found it elsewhere. -->
+<section id="three-things-to-remember" class="slide level2">
+<h2>Three Things to Remember</h2>
+<ol type="1">
+<li><strong>Values are stored with <code>&lt;-</code></strong>
+<ul>
+<li>Change them by editing the number</li>
+</ul></li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li><strong>Code runs top to bottom</strong>
+<ul>
+<li>Run chunks in order</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li><strong>If something breaks, read the error message</strong>
+<ul>
+<li>It often tells you what went wrong</li>
+</ul></li>
+</ol>
+<p>Everything else you can look up — or ask an AI tool.</p>
+</div>
+</section>
+<section id="try-it-yourself" class="slide level2">
+<h2>Try It Yourself</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href=""></a><span class="co"># YOUR </span><span class="al">TASK</span><span class="co">: Change these values and re-run</span></span>
+<span id="cb60-2"><a href=""></a>cost_A <span class="ot">&lt;-</span> <span class="dv">3000</span></span>
+<span id="cb60-3"><a href=""></a>cost_B <span class="ot">&lt;-</span> <span class="dv">1500</span></span>
+<span id="cb60-4"><a href=""></a>qaly_A <span class="ot">&lt;-</span> <span class="fl">0.82</span></span>
+<span id="cb60-5"><a href=""></a>qaly_B <span class="ot">&lt;-</span> <span class="fl">0.75</span></span>
+<span id="cb60-6"><a href=""></a></span>
+<span id="cb60-7"><a href=""></a><span class="co"># Calculate ICER</span></span>
+<span id="cb60-8"><a href=""></a>icer <span class="ot">&lt;-</span> (cost_A <span class="sc">-</span> cost_B) <span class="sc">/</span> (qaly_A <span class="sc">-</span> qaly_B)</span>
+<span id="cb60-9"><a href=""></a><span class="fu">cat</span>(<span class="st">"ICER = ₹"</span>, <span class="fu">round</span>(icer, <span class="dv">0</span>), <span class="st">"per QALY gained</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ICER = ₹ 21429 per QALY gained</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href=""></a><span class="co"># Is it cost-effective?</span></span>
+<span id="cb62-2"><a href=""></a>wtp <span class="ot">&lt;-</span> <span class="dv">100000</span></span>
+<span id="cb62-3"><a href=""></a><span class="cf">if</span> (icer <span class="sc">&lt;</span> wtp) {</span>
+<span id="cb62-4"><a href=""></a>  <span class="fu">cat</span>(<span class="st">"Cost-effective at WTP = ₹"</span>, <span class="fu">format</span>(wtp, <span class="at">big.mark=</span><span class="st">","</span>, <span class="at">scientific =</span> F), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb62-5"><a href=""></a>} <span class="cf">else</span> {</span>
+<span id="cb62-6"><a href=""></a>  <span class="fu">cat</span>(<span class="st">"NOT cost-effective</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb62-7"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cost-effective at WTP = ₹ 100,000 </code></pre>
+</div>
+</div>
 
 </section></section>
     </div>
